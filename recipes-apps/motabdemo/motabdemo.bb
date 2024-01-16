@@ -20,7 +20,7 @@ S = "${WORKDIR}/src"
 
 inherit  update-rc.d
 
-do_install_append () {
+do_install:append () {
     install -d ${D}${bindir}
     install -m 0755 fb-test ${D}${bindir}/motabdemo
 

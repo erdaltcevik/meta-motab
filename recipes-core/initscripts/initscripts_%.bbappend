@@ -1,17 +1,19 @@
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_append = " \
-  file://hostname.sh \
+SRC_URI:append = " \
 "
 
-do_install_append(){
+##  file://hostname.sh \
+##
 
-   install -m 0644 ${WORKDIR}/hostname.sh    ${D}${sysconfdir}/init.d/
+do_install:append(){
 
-   rm ${D}${sysconfdir}/rcS.d/S02banner.sh
-   rm ${D}${sysconfdir}/rcS.d/S38dmesg.sh
+##   install -m 0644 ${WORKDIR}/hostname.sh    ${D}${sysconfdir}/init.d/
 
-   rm ${D}${sysconfdir}/rc5.d/S15mountnfs.sh
+##   rm ${D}${sysconfdir}/rcS.d/S02banner.sh
+##   rm ${D}${sysconfdir}/rcS.d/S38dmesg.sh
+
+##   rm ${D}${sysconfdir}/rc5.d/S15mountnfs.sh
 
 }

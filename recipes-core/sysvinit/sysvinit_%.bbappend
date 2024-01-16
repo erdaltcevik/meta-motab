@@ -1,15 +1,17 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_append = " \
-  file://rcS-default \
+SRC_URI:append = " \
 "
 
-do_install_append(){
+##  file://rcS-default \
+##
 
-   install -m 0644 ${WORKDIR}/rcS-default  ${D}${sysconfdir}/default/rcS
+do_install:append(){
 
-   rm ${D}${sysconfdir}/rcS.d/S07bootlogd
+##   install -m 0644 ${WORKDIR}/rcS-default  ${D}${sysconfdir}/default/rcS
 
-   rm ${D}${sysconfdir}/rc5.d/S99stop-bootlogd
+##   rm ${D}${sysconfdir}/rcS.d/S07bootlogd
+
+##   rm ${D}${sysconfdir}/rc5.d/S99stop-bootlogd
 
 }

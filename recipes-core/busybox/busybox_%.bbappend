@@ -1,14 +1,13 @@
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_append = " \
-  file://motab-dvl.cfg \
+SRC_URI:append = " \
 "
 
-##
+##  file://motab-dvl.cfg \
 ##
 
-do_install_append(){
+do_install:append(){
 
 ##   install -m 0644 ${WORKDIR}/fstab ${D}${sysconfdir}
 

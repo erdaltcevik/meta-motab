@@ -1,7 +1,7 @@
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-SRC_URI_append = " \
+SRC_URI:append = " \
   file://am33xx.dtsi \
   file://am33xx-l4.dtsi \
   file://am33xx-clocks.dtsi \
@@ -9,10 +9,10 @@ SRC_URI_append = " \
   file://motab-dvl.cfg \
 "
 
-do_configure_append () {
+do_configure:append () {
 
-  cp ${WORKDIR}/am33xx.dtsi        ${S}/arch/arm/boot/dts
-  cp ${WORKDIR}/am33xx-l4.dtsi     ${S}/arch/arm/boot/dts
+#  cp ${WORKDIR}/am33xx.dtsi        ${S}/arch/arm/boot/dts
+#  cp ${WORKDIR}/am33xx-l4.dtsi     ${S}/arch/arm/boot/dts
 #  cp ${WORKDIR}/am33xx-clocks.dtsi ${S}/arch/arm/boot/dts
   cp ${WORKDIR}/motab.dts          ${S}/arch/arm/boot/dts
 

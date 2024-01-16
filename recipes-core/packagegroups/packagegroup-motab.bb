@@ -6,24 +6,28 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup
 
-RDEPENDS_${PN} = " \
-  dbus \
-  ti-sgx-ddk-um \
-  networkmanager \
-  openssh \
-  openssh-sftp-server \
-  tzdata \
-  kmscube \
-  fb-test \
-  evtest \
-  ntp \
-  psplash \
+RDEPENDS:${PN} = " \
+  libegl \
 "
 
+
+#  gobject-introspection \
+#  ti-sgx-ddk-um \
+#  dbus \
+#  networkmanager \
+#  openssh \
+#  openssh-sftp-server \
+#  tzdata \
+#  kmscube \
+#  fb-test \
+#  evtest \
+#  ntp \
+#  psplash \
 #  motabdemo \
 #  glmark2 \
 #  gtk+3 \
 #
 
-RRECOMMENDS_${PN} = "\
+RRECOMMENDS:${PN} = "\
+  kernel-modules \
 "

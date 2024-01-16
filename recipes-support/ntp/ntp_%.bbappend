@@ -1,10 +1,12 @@
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/ntp:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/ntp:"
 
-SRC_URI_append = " \
-  file://ntp.conf \
+SRC_URI:append = " \
 "
 
-do_install_append(){
-  install -m 0644 ${WORKDIR}/ntp.conf  ${D}${sysconfdir}/
+##  file://ntp.conf \
+##
+
+do_install:append(){
+##  install -m 0644 ${WORKDIR}/ntp.conf  ${D}${sysconfdir}/
 }
