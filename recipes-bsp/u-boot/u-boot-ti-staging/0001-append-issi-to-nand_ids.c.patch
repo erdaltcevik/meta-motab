@@ -1,0 +1,12 @@
+diff --git a/drivers/mtd/nand/raw/nand_ids.c b/drivers/mtd/nand/raw/nand_ids.c
+index 22ea5e2f..da7e9319 100644
+--- a/drivers/mtd/nand/raw/nand_ids.c
++++ b/drivers/mtd/nand/raw/nand_ids.c
+@@ -195,6 +195,7 @@ struct nand_manufacturer nand_manuf_ids[] = {
+ 	{NAND_MFR_SANDISK, "SanDisk"},
+ 	{NAND_MFR_INTEL, "Intel"},
+ 	{NAND_MFR_ATO, "ATO"},
++	{NAND_MFR_ISSI, "ISSI"},
+ 	{0x0, "Unknown"}
+ };
+

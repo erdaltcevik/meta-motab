@@ -29,5 +29,4 @@ RDEPENDS:${PN} = " \
 #
 
 RRECOMMENDS:${PN} = "\
-  kernel-modules \
 "
