@@ -1,0 +1,14 @@
+diff --git a/arch/arm/mach-omap2/am33xx/Kconfig b/arch/arm/mach-omap2/am33xx/Kconfig
+index 1299aec0..93d571a4 100644
+--- a/arch/arm/mach-omap2/am33xx/Kconfig
++++ b/arch/arm/mach-omap2/am33xx/Kconfig
+@@ -194,6 +194,9 @@ config TARGET_PDU001
+ 	  The PDU001 is a processor and display unit developed around
+ 	  the Computing-Module m2 from bytes at work AG.
+ 
++config TARGET_BRANA_MOTAB
++	bool "Support Brana MOTAB"
++
+ endchoice
+ 
+ config CLOCK_SYNTHESIZER

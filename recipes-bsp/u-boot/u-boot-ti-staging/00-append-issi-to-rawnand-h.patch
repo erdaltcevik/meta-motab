@@ -1,0 +1,12 @@
+diff --git a/include/linux/mtd/rawnand.h b/include/linux/mtd/rawnand.h
+index fb002ae6..50ad72f7 100644
+--- a/include/linux/mtd/rawnand.h
++++ b/include/linux/mtd/rawnand.h
+@@ -1039,6 +1039,7 @@ static inline void *nand_get_manufacturer_data(struct nand_chip *chip)
+ #define NAND_MFR_SANDISK	0x45
+ #define NAND_MFR_INTEL		0x89
+ #define NAND_MFR_ATO		0x9b
++#define NAND_MFR_ISSI  0xc8
+ 
+ /* The maximum expected count of bytes in the NAND ID sequence */
+ #define NAND_MAX_ID_LEN 8

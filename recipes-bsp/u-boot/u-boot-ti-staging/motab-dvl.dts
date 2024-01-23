@@ -1,0 +1,246 @@
+/*
+ * Copyright (C) 2020 Brana Electromech 
+ */
+/dts-v1/;
+
+#include "am33xx.dtsi"
+#include <dt-bindings/interrupt-controller/irq.h>
+
+/ {
+  model = "Brana AM335x MOTAB";
+  compatible = "brana,am335x-motab", "ti,am33xx";
+
+  aliases {
+//    ethernet0 = &cpsw_port1;
+//    ethernet1 = &cpsw_port2;
+  };
+
+  memory@80000000 {
+    device_type = "memory";
+    reg = <0x80000000 0x20000000>; /* 512 MB */
+  };
+
+  chosen {
+    stdout-path = &uart0;
+  };
+
+//  vdd_3v3b: fixedregulator0 {
+//    compatible = "regulator-fixed";
+//    regulator-name = "vdd_3v3b";
+//    regulator-min-microvolt = <3300000>;
+//    regulator-max-microvolt = <3300000>;
+//  };
+
+  panel_backlight: panel-backlight {
+    compatible = "gpio-backlight";
+    gpios = <&gpio1 24 GPIO_ACTIVE_HIGH>;
+  };
+
+  lcd_panel: lcd-panel {
+    compatible = "ti,tilcdc,panel";
+    enable-gpios = <&gpio1 23 GPIO_ACTIVE_HIGH>;
+    backlight = <&panel_backlight>;
+
+    display_timings: display-timings {
+      native-mode = <&timing0>;
+      timing0: 800x480 {
+        hactive         = <800>;
+        vactive         = <480>;
+        hback-porch     = <46>;
+        hfront-porch    = <210>;
+        hsync-len       = <10>;
+        vback-porch     = <23>;
+        vfront-porch    = <22>;
+        vsync-len       = <10>;
+        clock-frequency = <32000000>;
+        hsync-active    = <1>;
+        vsync-active    = <1>;
+      };
+    };
+
+    panel_info: panel-info {
+      ac-bias           = <255>;
+      ac-bias-intrpt    = <0>;
+      dma-burst-sz      = <16>;
+      bpp               = <16>;
+      fdd               = <0x80>;
+      sync-edge         = <0>;
+      sync-ctrl         = <1>;
+      raster-order      = <0>;
+      fifo-th           = <0>;
+    };
+
+//    port {
+//      panel_0: endpoint@0 {
+//        remote-endpoint = <&lcdc_0>;
+//      };
+//    };
+  };
+};
+
+//*****************************************************************************
+&uart0 {
+  status = "okay";
+};
+
+//*****************************************************************************
+&i2c0 {
+  status = "okay";
+  clock-frequency = <400000>;
+
+  tps: tps@24 {
+    reg = <0x24>;
+  };
+
+  // sMCU
+
+};
+
+#include "tps65217.dtsi"
+
+&tps {
+//  interrupts = <7>; /* NMI */
+//  interrupt-parent = <&intc>;
+
+  ti,pmic-shutdown-controller;
+
+  regulators {
+    dcdc1_reg: regulator@0 {
+      regulator-name = "vdds_ddr";
+      regulator-always-on;
+    };
+
+    dcdc2_reg: regulator@1 {
+      /* VDD_MPU voltage limits 0.95V - 1.26V with +/-4% tolerance */
+      regulator-name = "vdd_mpu";
+      regulator-min-microvolt = <925000>;
+      regulator-max-microvolt = <1351500>;
+      regulator-boot-on;
+      regulator-always-on;
+    };
+
+    dcdc3_reg: regulator@2 {
+      /* VDD_CORE voltage limits 0.95V - 1.1V with +/-4% tolerance */
+      regulator-name = "vdd_core";
+      regulator-min-microvolt = <925000>;
+      regulator-max-microvolt = <1150000>;
+      regulator-boot-on;
+      regulator-always-on;
+    };
+
+    ldo1_reg: regulator@3 {
+      regulator-name = "vio,vrtc,vdds";
+      regulator-always-on;
+    };
+
+    ldo2_reg: regulator@4 {
+      regulator-name = "vdd_3v3aux";
+      regulator-always-on;
+    };
+
+    ldo3_reg: regulator@5 {
+      regulator-name = "vdd_1v8";
+      regulator-min-microvolt = <1800000>;
+      regulator-max-microvolt = <1800000>;
+      regulator-always-on;
+    };
+
+    ldo4_reg: regulator@6 {
+      regulator-name = "vdd_3v3a";
+      regulator-always-on;
+    };
+  };   
+};
+
+//*****************************************************************************
+&mac {
+  status = "okay";
+  slaves = <1>;
+};
+
+&davinci_mdio {
+  status = "okay";
+
+  ethphy0: ethernet-phy@0 {
+    reg = <0>;
+  };
+};
+
+&cpsw_emac0 {
+  phy-handle = <&ethphy0>;
+  phy-mode = "mii";
+};
+
+//*****************************************************************************
+&spi0 {
+	status = "okay";
+
+	serial_nor: is25lp040e@0 {
+		compatible = "jedec,spi-nor";
+		reg = <0x0>;  /* Chip select 0 */
+    spi-max-frequency = <24000000>;
+	};
+};
+
+//*****************************************************************************
+&gpmc {
+  ranges = <0 0 0x08000000 0x8000000>; /* CS0 for 128 MiB chip */
+  status = "okay";
+
+  nandflash: nand@0,0 {
+    compatible = "ti,omap2-nand";
+    reg = <0 0 4>; /* CS0, offset 0, IO size 4 */
+//    interrupt-parent = <&gpmc>;
+//    interrupts = <0 IRQ_TYPE_NONE>, /* fifoevent */
+//                 <1 IRQ_TYPE_NONE>; /* termcount */
+    rb-gpios = <&gpmc 0 GPIO_ACTIVE_HIGH>; /* gpmc_wait0 */
+    ti,nand-ecc-opt = "bch8";
+    nand-bus-width = <8>;
+    gpmc,device-nand = "true";
+    gpmc,device-width = <1>;
+    gpmc,sync-clk-ps = <0>;
+    gpmc,cs-on-ns = <0>;
+    gpmc,cs-rd-off-ns = <30>;
+    gpmc,cs-wr-off-ns = <30>;
+    gpmc,adv-on-ns = <0>;
+    gpmc,adv-rd-off-ns = <30>;
+    gpmc,adv-wr-off-ns = <30>;
+    gpmc,we-on-ns = <0>;
+    gpmc,we-off-ns = <20>;
+    gpmc,oe-on-ns = <10>;
+    gpmc,oe-off-ns = <30>;
+    gpmc,access-ns = <30>;
+    gpmc,rd-cycle-ns = <30>;
+    gpmc,wr-cycle-ns = <30>;
+    gpmc,bus-turnaround-ns = <0>;
+    gpmc,cycle2cycle-delay-ns = <50>;
+    gpmc,clk-activation-ns = <0>;
+    gpmc,wait-monitoring-ns = <0>;
+    gpmc,wr-access-ns = <30>;
+    gpmc,wr-data-mux-bus-ns = <0>;
+
+    #address-cells = <1>;
+    #size-cells = <1>;
+
+    /* MTD partition table */
+    partition@0 {
+      label = "rootpart";
+      reg = <0x00000000 0x8000000>;
+    };
+  };
+};
+
+
+//*****************************************************************************
+&lcdc {
+  blue-and-red-wiring = "crossed";
+  status = "okay";
+
+//  port {
+//    lcdc_0: endpoint@0 {
+//      remote-endpoint = <&panel_0>;
+//    };
+//  };
+};
+
+

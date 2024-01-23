@@ -1,0 +1,223 @@
+#||******************************************************* Arch select
+CONFIG_ARM=y
+#||********************************************************** ARM arch
+CONFIG_ARCH_CPU_INIT=y
+CONFIG_ARCH_OMAP2PLUS=y
+CONFIG_AM33XX=y
+CONFIG_SYS_MPUCLK=1000
+CONFIG_TARGET_BRANA_MOTAB=y
+CONFIG_SYS_CONFIG_NAME="motab"
+CONFIG_MOTAB_DVL_BUILD=y
+#||***************************************************** General setup
+CONFIG_NR_DRAM_BANKS=1
+CONFIG_HAS_CUSTOM_SYS_INIT_SP_ADDR=y
+CONFIG_CUSTOM_SYS_INIT_SP_ADDR=0x4030ff00
+# CONFIG_SYS_MALLOC_CLEAR_ON_INIT is not set
+#||*************************************************************** API
+#||****************************************************** Boot options
+#||                                                        Boot images
+# CONFIG_FIT is not set
+CONFIG_OF_BOARD_SETUP=y
+# CONFIG_SYS_BOOT_RAMDISK_HIGH is not set
+#||                                                   Autoboot options
+# CONFIG_AUTOBOOT is not set
+
+#||*********************************************************** Console
+CONFIG_LOGLEVEL=4
+# CONFIG_CONSOLE_FLUSH_SUPPORT is not set
+# CONFIG_CONSOLE_MUX is not set
+#||*********************************************************** Logging
+##CONFIG_LOG=y
+CONFIG_LOG_MAX_LEVEL=4
+CONFIG_LOG_DEFAULT_LEVEL=4
+##CONFIG_SPL_LOG=y
+CONFIG_SPL_LOG_MAX_LEVEL=4
+CONFIG_LOG_ERROR_RETURN=y
+
+#||****************************************************** Init options
+#||************************************************** Security support
+#||**************************************************** Update support
+#||********************************************************* Blob list
+#||********************************************************* SPL / TPL
+CONFIG_SPL=y
+CONFIG_SPL_SHOW_ERRORS=y
+# CONFIG_SPL_RAW_IMAGE_SUPPORT is not set
+CONFIG_SPL_SYS_MALLOC_SIMPLE=y
+CONFIG_SYS_SPL_MALLOC=y
+CONFIG_SYS_SPL_MALLOC_SIZE=0x800000
+# CONFIG_SPL_BANNER_PRINT is not set
+# CONFIG_SYS_MMCSD_RAW_MODE_U_BOOT_USE_SECTOR is not set
+# CONFIG_SPL_CRC32 is not set
+
+CONFIG_SPL_ENV_SUPPORT=y
+CONFIG_SPL_ETH=y
+##CONFIG_SPL_GPIO=y
+CONFIG_SPL_I2C=y
+CONFIG_SPL_LIBCOMMON_SUPPORT=y
+CONFIG_SPL_LIBGENERIC_SUPPORT=y
+
+# CONFIG_SPL_NAND_SUPPORT is not set
+
+CONFIG_SPL_DM_SPI=y
+CONFIG_SPL_DM_SPI_FLASH=y
+
+CONFIG_SPL_NET=y
+CONFIG_SPL_NET_VCI_STRING="AM335x U-Boot SPL"
+
+CONFIG_SPL_POWER=y
+
+CONFIG_SPL_SERIAL=y
+
+CONFIG_SPL_SPI=y
+CONFIG_SPL_SPI_FLASH_SUPPORT=y
+CONFIG_SPL_SPI_FLASH_TINY=y
+
+# CONFIG_SPL_AM33XX_ENABLE_RTC32K_OSC is not set
+#||************************************ FDT tools for simplefb support
+##CONFIG_FDT_SIMPLEFB=y
+#||******************************************** Command line interface
+CONFIG_SYS_PROMPT="U-Boot#"
+# CONFIG_SYS_XTRACE is not set
+# CONFIG_AUTO_COMPLETE is not set
+
+# CONFIG_CMD_BOOTD is not set
+# CONFIG_BOOTM_NETBSD is not set
+# CONFIG_BOOTM_PLAN9 is not set
+# CONFIG_BOOTM_RTEMS is not set
+# CONFIG_BOOTM_VXWORKS is not set
+# CONFIG_CMD_ELF is not set
+### CONFIG_CMD_FDT is not set
+# CONFIG_CMD_GO is not set
+# CONFIG_CMD_RUN is not set
+# CONFIG_CMD_IMI is not set
+# CONFIG_CMD_XIMG is not set
+# CONFIG_CMD_EXPORTENV is not set
+# CONFIG_CMD_IMPORTENV is not set
+# CONFIG_CMD_SAVEENV is not set
+# CONFIG_CMD_ENV_EXISTS is not set
+# CONFIG_CMD_CRC32 is not set
+CONFIG_CMD_MEMINFO=y
+CONFIG_CMD_MEM_SEARCH=y
+CONFIG_CMD_MEMTEST=y
+CONFIG_CMD_DM=y
+# CONFIG_CMD_FLASH is not set
+CONFIG_CMD_GPIO=y
+# CONFIG_CMD_LOADB is not set
+# CONFIG_CMD_LOADS is not set
+CONFIG_CMD_MTD=y
+CONFIG_CMD_NAND=y
+# CONFIG_CMD_ITEST is not set
+# CONFIG_CMD_SOURCE is not set
+# CONFIG_CMD_SETEXPR is not set
+CONFIG_CMD_DHCP=y
+# CONFIG_BOOTP_BOOTPATH is not set
+# CONFIG_BOOTP_DNS is not set
+# CONFIG_BOOTP_GATEWAY is not set
+# CONFIG_BOOTP_HOSTNAME is not set
+# CONFIG_BOOTP_SUBNETMASK is not set
+CONFIG_CMD_TFTPBOOT=y
+# CONFIG_NET_TFTP_VARS is not set
+# CONFIG_CMD_NFS is not set
+
+##CONFIG_CMD_BMP=y
+# CONFIG_CMD_SLEEP is not set
+# CONFIG_CMD_VIDCONSOLE is not set
+
+CONFIG_CMD_LOG=y
+
+CONFIG_CMD_UBI=y
+#||*************************************************** Partition Types
+#||*********************************************** Device Tree Control
+CONFIG_OF_CONTROL=y
+##CONFIG_DEFAULT_DEVICE_TREE="motab"
+#||******************************************************* Environment
+CONFIG_SYS_RELOC_GD_ENV_ADDR=y
+#||************************************************ Networking support
+CONFIG_BOOTP_SEND_HOSTNAME=y
+#||**************************************************** Device Drivers
+CONFIG_DM=y
+CONFIG_SPL_DM=y
+CONFIG_SPL_DM_WARN=y
+##CONFIG_DM_DEBUG=y
+# CONFIG_DM_DEVICE_REMOVE is not set
+CONFIG_SPL_DM_SEQ_ALIAS=y
+CONFIG_REGMAP=y
+
+#||                                                        Bus devices
+CONFIG_SPL_TI_SYSC=y
+#||                                                              Clock
+CONFIG_CLK=y
+CONFIG_CLK_CCF=y
+CONFIG_CLK_TI_AM3_DPLL=y
+CONFIG_CLK_TI_CTRL=y
+CONFIG_CLK_TI_DIVIDER=y
+CONFIG_CLK_TI_GATE=y
+CONFIG_CLK_TI_MUX=y
+#||                                                        DFU Support
+#||                                                       GPIO Support
+CONFIG_DM_GPIO=y
+#||                                                        I2C support
+CONFIG_DM_I2C=y
+#||                                             Enable input subsystem
+# CONFIG_INPUT is not set
+#||                                        MMC Host controller Support
+# CONFIG_MMC is not set
+#||                                                        MTD Support
+CONFIG_MTD=y
+CONFIG_DM_MTD=y
+CONFIG_MTD_RAW_NAND=y
+CONFIG_SYS_NAND_ONFI_DETECTION=y
+CONFIG_SYS_NAND_PAGE_SIZE=0x800
+CONFIG_SYS_NAND_OOBSIZE=0x40
+
+CONFIG_DM_SPI_FLASH=y
+CONFIG_SPI_FLASH=y
+CONFIG_SF_DEFAULT_SPEED=24000000
+CONFIG_SPI_FLASH_ISSI=y
+#||                    Ethernet PHY (physical media interface) support
+CONFIG_PHY_SMSC=y
+CONFIG_DM_ETH=y
+#||                                             Network device support
+CONFIG_MII=y
+CONFIG_DRIVER_TI_CPSW=y
+#||                                                    Pin controllers
+#||                                                              Power
+##CONFIG_DM_PMIC=y
+# CONFIG_SPL_DM_PMIC is not set
+CONFIG_PMIC_TPS65217=y
+#||                                                     Serial drivers
+CONFIG_BAUDRATE=115200
+CONFIG_DM_SERIAL=y
+
+CONFIG_DEBUG_UART=y
+CONFIG_DEBUG_UART_OMAP=y
+CONFIG_DEBUG_UART_BASE=0x44e09000
+CONFIG_DEBUG_UART_CLOCK=48000000
+CONFIG_DEBUG_UART_SHIFT=2
+CONFIG_DEBUG_UART_BOARD_INIT=y
+CONFIG_DEBUG_UART_ANNOUNCE=y
+#||                                                        SPI Support
+CONFIG_SPI=y
+CONFIG_DM_SPI=y
+CONFIG_OMAP3_SPI=y
+#||                                                      Timer Support
+#||                                                        USB support
+#||                                                   Graphics support
+CONFIG_VIDEO=y
+CONFIG_BACKLIGHT_GPIO=y
+### CONFIG_CONSOLE_NORMAL is not set
+CONFIG_SYS_WHITE_ON_BLACK=y
+CONFIG_PANEL=y
+# CONFIG_SIMPLE_PANEL is not set
+CONFIG_AM335X_LCD=y
+##CONFIG_VIDEO_DT_SIMPLEFB=y
+
+#||****************************************************** File systems
+#||************************************************** Library routines
+# CONFIG_SPL_USE_TINY_PRINTF is not set
+# CONFIG_REGEX is not set
+# CONFIG_GZIP is not set
+# CONFIG_ZLIB is not set
+# CONFIG_OF_LIBFDT_OVERLAY is not set
+CONFIG_SPL_OF_LIBFDT=y
+

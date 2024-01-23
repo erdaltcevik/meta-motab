@@ -1,4 +1,4 @@
-SUMMARY = "MOTAB Release filesystem image"
+SUMMARY = "MOTAB Development filesystem image"
 
 DESCRIPTION = "Complete filesystem image for MOTAB"
 
@@ -10,9 +10,9 @@ IMAGE_INSTALL += " \
   packagegroup-motab \
 "
 
+IMAGE_FEATURES:append = " tools-debug "
 
 
 export IMAGE_BASENAME = "motab-image"
-
 
 

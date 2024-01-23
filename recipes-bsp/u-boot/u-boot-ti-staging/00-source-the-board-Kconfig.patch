@@ -1,0 +1,11 @@
+diff --git a/arch/arm/mach-omap2/Kconfig b/arch/arm/mach-omap2/Kconfig
+index 309b967b..04c52298 100644
+--- a/arch/arm/mach-omap2/Kconfig
++++ b/arch/arm/mach-omap2/Kconfig
+@@ -208,5 +208,6 @@ source "board/ti/am43xx/Kconfig"
+ source "board/ti/am335x/Kconfig"
+ source "board/compulab/cm_t43/Kconfig"
+ source "board/phytec/phycore_am335x_r2/Kconfig"
++source "board/brana/motab/Kconfig"
+ 
+ endif

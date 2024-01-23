@@ -1,0 +1,53 @@
+
+#include "am33xx-u-boot.dtsi"
+
+&l4_wkup {
+  bootph-pre-ram;
+
+  segment@200000 {
+    bootph-pre-ram;
+
+    target-module@9000 {
+      bootph-pre-ram;
+    };
+  };
+};
+
+
+
+&uart0 {
+  bootph-pre-ram;
+};
+
+
+//*******************************************************************
+&l4_per {
+  bootph-pre-ram;
+
+  segment@0 {
+    bootph-pre-ram;
+
+    target-module@30000 {
+      bootph-pre-ram;
+    };
+  };
+  segment@300000 {
+    bootph-some-ram;
+
+    target-module@e000 {
+      bootph-some-ram;
+    };
+  };
+};
+
+&spi0 {
+  bootph-pre-ram;
+};
+&serial_nor {
+  bootph-pre-ram;
+};
+
+&lcdc {
+  bootph-some-ram;
+};
+

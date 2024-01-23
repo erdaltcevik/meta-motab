@@ -1,0 +1,25 @@
+if TARGET_BRANA_MOTAB
+
+config SYS_VENDOR
+	default "brana"
+
+config SYS_BOARD
+	default "motab"
+
+config SYS_SOC
+	default "am33xx"
+
+config SYS_CONFIG_NAME
+   default "motab-dvl" if MOTAB_DVL_BUILD
+   default "motab"
+
+config MOTAB_DVL_BUILD
+   bool "Make a development build for MOTAB"
+   help
+      Make a development build
+
+config DEFAULT_DEVICE_TREE
+   default "motab-dvl" if MOTAB_DVL_BUILD
+   default "motab"
+
+endif

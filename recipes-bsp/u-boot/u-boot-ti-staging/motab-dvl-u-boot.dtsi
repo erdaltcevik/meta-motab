@@ -1,0 +1,185 @@
+
+#include "am33xx-u-boot.dtsi"
+
+&l4_wkup {
+  bootph-pre-ram;
+
+  segment@200000 {
+    bootph-pre-ram;
+
+    target-module@0 {
+      bootph-pre-ram;
+    };
+    target-module@7000 {
+      bootph-pre-ram;
+    };
+    target-module@9000 {
+      bootph-pre-ram;
+    };
+    target-module@10000 {
+      bootph-pre-ram;
+    };
+  };
+};
+
+&prcm {
+  bootph-pre-ram;
+};
+&prcm_clocks {
+  bootph-pre-ram;
+};
+
+&virt_19200000_ck {
+  bootph-pre-ram;
+};
+&virt_24000000_ck {
+  bootph-pre-ram;
+};
+&virt_25000000_ck {
+  bootph-pre-ram;
+};
+&virt_26000000_ck {
+  bootph-pre-ram;
+};
+&dpll_core_ck {
+  bootph-pre-ram;
+};
+&dpll_core_x2_ck {
+  bootph-pre-ram;
+};
+&dpll_core_m4_ck {
+  bootph-pre-ram;
+};
+&dpll_core_m5_ck {
+  bootph-pre-ram;
+};
+&dpll_disp_ck {
+  bootph-pre-ram;
+};
+&dpll_disp_m2_ck {
+  bootph-pre-ram;
+};
+&dpll_per_ck {
+  bootph-pre-ram;
+};
+&dpll_per_m2_ck {
+  bootph-pre-ram;
+};
+&cpsw_125mhz_gclk {
+  bootph-pre-ram;
+};
+&cpsw_cpts_rft_clk {
+  bootph-pre-ram;
+};
+&lcd_gclk {
+  bootph-pre-ram;
+};
+
+&per_cm {
+  bootph-pre-ram;
+};
+&l4ls_clkctrl {
+  bootph-pre-ram;
+};
+&lcdc_clkctrl {
+//  bootph-pre-ram;
+};
+
+//&wkup_cm {
+//  bootph-pre-ram;
+//};
+//&l4_wkup_clkctrl {
+//  bootph-pre-ram;
+//};
+
+//&gpio0 {
+//  bootph-pre-ram;
+//};
+
+&uart0 {
+//  bootph-pre-ram;
+};
+
+&scm {
+  bootph-pre-ram;
+};
+&am33xx_pinmux {
+  bootph-pre-ram;
+};
+&scm_conf {
+  bootph-pre-ram;
+};
+&scm_clocks {
+  bootph-pre-ram;
+};
+&sys_clkin_ck {
+  bootph-pre-ram;
+};
+
+//*******************************************************************
+&l4_per {
+  bootph-pre-ram;
+
+  segment@0 {
+    bootph-pre-ram;
+
+    target-module@30000 {
+      bootph-pre-ram;
+    };
+    target-module@4c000 {
+//      bootph-pre-ram;
+    };
+  };
+  segment@300000 {
+    bootph-pre-ram;
+
+    target-module@e000 {
+      bootph-pre-ram;
+    };
+  };
+};
+
+&spi0 {
+  bootph-pre-ram;
+  status = "okay";
+};
+&serial_nor {
+  bootph-pre-ram;
+};
+
+//&gpio1 {
+//  bootph-pre-ram;
+//};
+
+&lcdc {
+  bootph-some-ram;
+};
+
+
+//*******************************************************************
+&i2c0 {
+//  bootph-pre-ram;
+};
+&tps {
+//  bootph-pre-ram;
+};
+
+
+//*******************************************************************
+&panel_backlight {
+//  bootph-pre-ram;
+};
+
+&lcd_panel {
+//  bootph-pre-ram;
+};
+&display_timings {
+//  bootph-pre-ram;
+};
+&panel_info {
+//  bootph-pre-ram;
+};
+&timing0 {
+//  bootph-pre-ram;
+};
+

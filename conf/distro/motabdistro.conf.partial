@@ -274,11 +274,5 @@ PACKAGECONFIG:remove:pn-busybox = "hwclock"
 INITSCRIPT_PACKAGES:remove:pn-busybox = "${PN}-hwclock"
 
 
-DEFAULT_TIMEZONE = "Europe/Istanbul"
-
-USE_VT = "0"
-
-CREATE_SRCIPK:pn-linux-ti-staging = "0"
-
 
 
