@@ -222,3 +222,17 @@ USE_VT = "0"
 
 CREATE_SRCIPK:pn-linux-ti-staging = "0"
 CREATE_SRCIPK:pn-u-boot-ti-staging = "0"
+
+PACKAGECONFIG:remove:pn-gdb = "python"
+PACKAGECONFIG:remove:pn-opkg-utils = "python"
+
+PACKAGECONFIG:remove:pn-systemd = "backlight"
+
+
+
+
+
+
+
+
+

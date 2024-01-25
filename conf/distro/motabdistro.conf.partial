@@ -249,7 +249,12 @@ LICENSE_FLAGS_ACCEPTED = "commercial_gst-ffmpeg commercial_gstreamer1.0-libav co
 ASSUME_PROVIDED += "nativesdk-perl"
 ###--------------------------------------------------------------------------------------
 ###--------------------------------------------------------------------------------------
+
+PACKAGECONFIG:remove:pn-libxml2 = "python"
+
 PACKAGECONFIG:remove:pn-opkg-utils = "python"
+
+
 
 ENABLE_BINARY_LOCALE_GENERATION = "0"
 ##GLIBC_GENERATE_LOCALES = "en_GB.UTF-8 tr_TR.UTF-8"

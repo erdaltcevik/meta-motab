@@ -8,6 +8,9 @@ inherit packagegroup
 
 RDEPENDS:${PN} = " \
   libegl \
+  kmscube \
+  fb-test \
+  evtest \
 "
 
 
@@ -18,9 +21,6 @@ RDEPENDS:${PN} = " \
 #  openssh \
 #  openssh-sftp-server \
 #  tzdata \
-#  kmscube \
-#  fb-test \
-#  evtest \
 #  ntp \
 #  psplash \
 #  motabdemo \

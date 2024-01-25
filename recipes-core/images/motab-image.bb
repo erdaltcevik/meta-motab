@@ -12,7 +12,9 @@ IMAGE_INSTALL += " \
 
 
 
+
+
+
+
 export IMAGE_BASENAME = "motab-image"
-
-
 
