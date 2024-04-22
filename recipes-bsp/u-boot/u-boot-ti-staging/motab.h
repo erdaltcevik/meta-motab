@@ -46,9 +46,9 @@
 #define BOOTCMD  "bootcmd="                               \
                  "ubi part rootpart; "                    \
                  "ubifsmount ubi0:rootfs; "               \
-                 "ubifsload ${fdtaddr} boot/motab.dtb; "  \
-                 "ubifsload ${loadaddr} boot/uImage; "    \
-                 "bootm ${loadaddr} - ${fdtaddr}\0"
+                 "ubifsload ${fdtaddr} boot/dtb/motab.dtb; "  \
+                 "ubifsload ${loadaddr} boot/zImage; "    \
+                 "bootz ${loadaddr} - ${fdtaddr}\0"
 #endif
 
 #define CFG_EXTRA_ENV_SETTINGS                                                               \

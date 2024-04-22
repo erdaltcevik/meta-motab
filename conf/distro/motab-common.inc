@@ -44,16 +44,16 @@ TMPDIR .= "${TCMODEAPPEND}"
 ##DISTRO_FEATURES = "${DISTRO_FEATURES_DEFAULT} ${DISTRO_FEATURES_LIBC}"
 
 # Add additional distro features
-DISTRO_FEATURES:append = " pam wayland opengl"
+##DISTRO_FEATURES:append = " pam wayland opengl"
 #DISTRO_FEATURES:append = " opencl"
-DISTRO_FEATURES:append = " vulkan"
-DISTRO_FEATURES:append = " opencv"
-DISTRO_FEATURES:append = " openmp"
+##DISTRO_FEATURES:append = " vulkan"
+##DISTRO_FEATURES:append = " opencv"
+##DISTRO_FEATURES:append = " openmp"
 
 # Normally target distro features will not be applied to native builds:
 # Native distro features on this list will use the target feature value
-DISTRO_FEATURES_FILTER_NATIVE:append = " opencl opencv openmp"
-DISTRO_FEATURES_FILTER_NATIVESDK:append = " opencl opencv openmp"
+##DISTRO_FEATURES_FILTER_NATIVE:append = " opencl opencv openmp"
+##DISTRO_FEATURES_FILTER_NATIVESDK:append = " opencl opencv openmp"
 
 # Set global runtime providers for major components
 ARAGO_SYSVINIT ??= "0"
@@ -192,6 +192,7 @@ ASSUME_PROVIDED += "nativesdk-perl"
 ###--------------------------------------------------------------------------------------
 
 DISTRO_FEATURES:remove = " \
+ acl \
  alsa \
  argp \
  bluetooth \
@@ -202,6 +203,7 @@ DISTRO_FEATURES:remove = " \
  usbgadget \
  usbhost \
  wifi \
+ xattr \
  nfs \
  zeroconf \
  pci \
@@ -209,12 +211,12 @@ DISTRO_FEATURES:remove = " \
  nfc \
  x11 \
  vfat \
- seccomp \
 "
 
 DISTRO_FEATURES_BACKFILL_CONSIDERED = " \
  pulseaudio \
 "
+DISTRO_FEATURES:append = " pam wayland opengl "
 
 DEFAULT_TIMEZONE = "Europe/Istanbul"
 
@@ -226,12 +228,40 @@ CREATE_SRCIPK:pn-u-boot-ti-staging = "0"
 PACKAGECONFIG:remove:pn-gdb = "python"
 PACKAGECONFIG:remove:pn-opkg-utils = "python"
 
-PACKAGECONFIG:remove:pn-systemd = "backlight"
+PACKAGECONFIG:remove:pn-systemd = " backlight binfmt zstd hibernate "
+
+SYSTEMD_DEFAULT_TARGET = "graphical.target"
 
 
+##ENABLE_BINARY_LOCALE_GENERATION = "0"
+##GLIBC_GENERATE_LOCALES = "en_US.UTF-8 tr_TR.UTF-8"
+##IMAGE_LINGUAS = "en-us tr-tr"
+##IMAGE_LINGUAS:remove = " en-us "
 
+PACKAGECONFIG:remove:pn-libdrm = " \
+ intel \
+ radeon \
+ amdgpu \
+ nouveau \
+ vmwgfx \
+ freedreno \
+ vc4 \
+ etnaviv \
+"
+##hostname:pn-base-files = "the-hostname"
 
+SIMPLECLIENTS = "egl"
 
+PACKAGECONFIG:remove:pn-weston = " \
+ shell-ivi \
+ shell-kiosk \
+ image-jpeg \
+"
+##
+## wayland \
+## shell-desktop \
+##
+##
 
 
 

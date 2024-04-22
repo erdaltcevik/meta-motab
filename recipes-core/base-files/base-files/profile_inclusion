@@ -1,0 +1,9 @@
+
+# Some personal aliases
+alias l='ls -Alp'
+alias ll='l | less'
+alias lw='ls -1Ap'
+alias lt='ls -Alpt'
+alias ..='cd .. && l'
+
+

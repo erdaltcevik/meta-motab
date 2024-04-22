@@ -2,16 +2,13 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI:append = " \
+  file://profile_inclusion \
+  file://fstab.in \
 "
-
-##  file://fstab \
-##  file://profile \
-##
-
 
 do_install:append(){
 
-##   install -m 0644 ${WORKDIR}/fstab    ${D}${sysconfdir}
-##   install -m 0644 ${WORKDIR}/profile  ${D}${sysconfdir}
+  cat ${WORKDIR}/profile_inclusion >> ${D}${sysconfdir}/profile
+  cp  ${WORKDIR}/fstab.in  ${D}${sysconfdir}/fstab
 
 }

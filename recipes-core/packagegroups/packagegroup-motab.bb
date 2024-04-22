@@ -8,12 +8,22 @@ inherit packagegroup
 
 RDEPENDS:${PN} = " \
   libegl \
-  kmscube \
+  weston-init \
+  weston-examples \
+  wayland-utils \
+  libdrm-tests \
+  gtk4 \
+  tslib \
   fb-test \
   evtest \
+  gdbserver \
 "
 
-
+#
+#  gtk+3 \
+#  gtk+3-demo \
+#
+#  kmscube \
 #  gobject-introspection \
 #  ti-sgx-ddk-um \
 #  dbus \
@@ -24,9 +34,11 @@ RDEPENDS:${PN} = " \
 #  ntp \
 #  psplash \
 #  motabdemo \
+#  freeglut \
 #  glmark2 \
-#  gtk+3 \
 #
+
 
 RRECOMMENDS:${PN} = "\
 "
+

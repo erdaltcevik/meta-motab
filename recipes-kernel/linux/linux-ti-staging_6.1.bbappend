@@ -20,4 +20,4 @@ do_configure:append () {
 
 }
 
-KERNEL_CONFIG_FRAGMENTS += "${WORKDIR}/motab-dvl.cfg"
+##KERNEL_CONFIG_FRAGMENTS += "${WORKDIR}/motab-dvl.cfg"

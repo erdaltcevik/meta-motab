@@ -1,0 +1,144 @@
+
+export PATH=/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/python3-native:/stor/motab-arago/sources/oe-core/scripts:/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi:/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot/usr/bin/crossscripts:/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/sbin:/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin:/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/sbin:/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/bin:/stor/motab-arago/sources/bitbake/bin:/stor/motab-arago/build/arago-tmp-default-glibc/hosttools:/stor/motab-arago/sources/oe-core/scripts:/stor/motab-arago/sources/meta-virtualization/scripts:/stor/motab-arago/sources/meta-arm/scripts:/stor/motab-arago/sources/bitbake/bin:/home/erdal/.local/bin:/home/erdal/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
+export PKG_CONFIG_SYSROOT_DIR=/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot
+export PKG_CONFIG_PATH=/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot/usr/lib/pkgconfig:/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot/usr/share/pkgconfig
+
+env  sh -c  "meson --prefix /usr --buildtype plain --bindir bin --sbindir sbin --datadir share --libdir lib --libexecdir libexec --includedir include --mandir share/man --infodir share/info --sysconfdir /etc --localstatedir /var --sharedstatedir /com --wrap-mode nodownload --native-file /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.native /stor/motab-arago/build/workspace/sources/weston  /stor/motab-arago/build/workspace/sources/weston/build/default --cross-file /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.cross     -Dpipewire=false -Dsimple-clients=all -Ddemo-clients=true -Dcolor-management-colord=false -Drenderer-gl=true -Ddeprecated-backend-fbdev=false -Dbackend-headless=false -Dimage-jpeg=true -Dbackend-drm=true -Ddeprecated-weston-launch=false -Dlauncher-libseat=false -Dcolor-management-lcms=false -Dbackend-rdp=false -Dremoting=false -Dscreenshare=true -Dshell-desktop=true -Dshell-fullscreen=true -Dshell-ivi=true -Dsystemd=true -Dlauncher-logind=true -Dbackend-drm-screencast-vaapi=false -Dbackend-wayland=true -Dimage-webp=false -Dbackend-x11=false -Dxwayland=false"
+
+
+
+
+
+env  sh -c  "meson --prefix /usr --buildtype plain --bindir bin --sbindir sbin --datadir share --libdir lib --libexecdir libexec --includedir include --mandir share/man --infodir share/info --sysconfdir /etc --localstatedir /var --sharedstatedir /com --wrap-mode nodownload --native-file /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.native /stor/motab-arago/build/workspace/sources/weston  /stor/motab-arago/build/workspace/sources/weston/build/default --cross-file /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.cross     -Dpipewire=false -Dsimple-clients=all -Ddemo-clients=true -Dcolor-management-colord=false -Drenderer-gl=true -Ddeprecated-backend-fbdev=false -Dbackend-headless=false -Dimage-jpeg=true -Dbackend-drm=true -Ddeprecated-weston-launch=false -Dlauncher-libseat=false -Dcolor-management-lcms=false -Dbackend-rdp=false -Dremoting=false -Dscreenshare=true -Dshell-desktop=true -Dshell-fullscreen=true -Dshell-ivi=true -Dsystemd=true -Dlauncher-logind=true -Dbackend-drm-screencast-vaapi=false -Dbackend-wayland=true -Dimage-webp=false -Dbackend-x11=false -Dxwayland=false"
+
+
+
+
+
+
+export MESONOPTS=" --prefix /usr  --buildtype plain  --bindir bin  --sbindir sbin  --datadir share  --libdir lib  --libexecdir libexec  --includedir include  --mandir share/man  --infodir share/info  --sysconfdir /etc  --localstatedir /var  --sharedstatedir /com  --wrap-mode nodownload  --native-file /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.native  --cross-file /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.cross"
+     
+export EXTRA_OEMESON=" -Dpipewire=false  -Dsimple-clients=all -Ddemo-clients=true -Dcolor-management-colord=false -Drenderer-gl=true -Ddeprecated-backend-fbdev=false -Dbackend-headless=false -Dimage-jpeg=true -Dbackend-drm=true -Ddeprecated-weston-launch=false -Dlauncher-libseat=false -Dcolor-management-lcms=false -Dbackend-rdp=false -Dremoting=false -Dscreenshare=true -Dshell-desktop=true -Dshell-fullscreen=true -Dshell-ivi=true -Dsystemd=true -Dlauncher-logind=true -Dbackend-drm-screencast-vaapi=false -Dbackend-wayland=true -Dimage-webp=false -Dbackend-x11=false -Dxwayland=false"
+
+
+
+
+
+env  sh -c "meson --auto-features=auto --backend=ninja --buildtype=release --default-library=shared --layout=mirror --optimization=0 --unity=off --warnlevel=1 --wrap-mode=default --native-file=/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.native --cross-file=/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.cross   
+/stor/motab-arago/build/workspace/sources/weston" 
+--prefix /usr --buildtype plain --bindir bin --sbindir sbin --datadir share --libdir lib --libexecdir libexec --includedir include --mandir share/man --infodir share/info --sysconfdir /etc --localstatedir /var --sharedstatedir /com --wrap-mode nodownload -Dpipewire=false -Dsimple-clients=all -Ddemo-clients=true -Dcolor-management-colord=false 
+     -Drenderer-gl=true 
+     -Ddeprecated-backend-fbdev=false 
+     -Dbackend-headless=false 
+     -Dimage-jpeg=true 
+     -Dbackend-drm=true 
+     -Ddeprecated-weston-launch=false 
+     -Dlauncher-libseat=false 
+     -Dcolor-management-lcms=false 
+     -Dbackend-rdp=false 
+     -Dremoting=false 
+     -Dscreenshare=true 
+     -Dshell-desktop=true 
+     -Dshell-fullscreen=true 
+     -Dshell-ivi=true 
+     -Dsystemd=true 
+     -Dlauncher-logind=true 
+     -Dbackend-drm-screencast-vaapi=false 
+     -Dbackend-wayland=true 
+     -Dimage-webp=false 
+     -Dbackend-x11=false 
+     -Dxwayland=false
+     
+     
+
+     
+     
+     
+MESON_CROSS_FILE="--cross-file /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.cross"
+
+MESON_SOURCEPATH="/stor/motab-arago/build/workspace/sources/weston"
+
+
+
+
+config/weston/cdt.launchMode=run
+config/weston/cdt.toolChain.id=gcc-x86_64-/stor/motab-arago/build/arago-tmp-default-glibc/hosttools/gcc
+config/weston/cdt.toolChain.type=org.eclipse.cdt.build.gcc
+
+config/weston/meson.arguments=--prefix\=/usr --bindir\=bin --datadir\=share --includedir\=include --infodir\=share/info --libdir\=lib --libexecdir\=libexec --localstatedir\=/var --mandir\=share/man --sbindir\=sbin --sharedstatedir\=/com --sysconfdir\=/etc --auto-features\=auto --backend\=ninja --buildtype\=custom --default-library\=shared --layout\=flat --optimization\=2 --unity\=subprojects --warnlevel\=0 --wrap-mode\=default --native-file\=/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.native --cross-file\=/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/meson.cross 
+
+config/weston/meson.environment=
+
+config/weston/meson.project.options=-Dpipewire\=false -Dremoting\=false -Dcolor-management-colord\=false -Dpipewire\=false -Drenderer-gl\=true -Dimage-webp\=false -Dcolor-management-lcms\=false -Dbackend-drm-screencast-vaapi\=false -Dbackend-rdp\=false -Dbackend-x11\=false -Dxwayland\=false
+
+eclipse.preferences.version=1
+
+
+
+
+  /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-gcc
+
+
+
+
+ignoring nonexistent directory 
+ "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/../../../../../arm-oe-linux-gnueabi/include"
+ignoring duplicate directory 
+ "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/../../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include"
+ignoring nonexistent directory
+ "/not/exist/usr/lib/arm-oe-linux-gnueabi/11.4.0/include"
+ignoring nonexistent directory 
+ "/not/exist/usr/local/include"
+ignoring duplicate directory 
+ "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/../../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include-fixed"
+ignoring nonexistent directory 
+ "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/../../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/../../../../../arm-oe-linux-gnueabi/include"
+ignoring nonexistent directory 
+ "/not/exist/usr/include"
+ 
+#include "..." search starts here:
+#include <...> search starts here:
+ /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include
+ /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include-fixed
+End of search list.
+# 0 "<stdin>"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "<stdin>"
+
+
+ignoring nonexistent directory "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/../../../../../arm-oe-linux-gnueabi/include"
+ignoring duplicate directory "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/../../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include"
+ignoring nonexistent directory "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot/usr/local/include"
+ignoring duplicate directory "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/../../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include-fixed"
+ignoring nonexistent directory "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/../../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/../../../../../arm-oe-linux-gnueabi/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include
+ /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot-native/usr/bin/arm-oe-linux-gnueabi/../../lib/arm-oe-linux-gnueabi/gcc/arm-oe-linux-gnueabi/11.4.0/include-fixed
+ /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot/usr/lib/arm-oe-linux-gnueabi/11.4.0/include
+ /stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot/usr/include
+End of search list.
+# 0 "<stdin>"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/stor/motab-arago/build/arago-tmp-default-glibc/work/armv7at2hf-neon-oe-linux-gnueabi/weston/10.0.2-r0.arago1_tisdk_0/recipe-sysroot/usr/include/stdc-predef.h" 1 3 4
+# 0 "<command-line>" 2
+# 1 "<stdin>"
+
+
+
+#### /proj/westo via /opt/motab-sdk
+
+PKG_CONFIG_PATH=/opt/motab-sdk/sysroots/armv7at2hf-neon-oe-linux-gnueabi/usr/lib/pkgconfig:/opt/motab-sdk/sysroots/armv7at2hf-neon-oe-linux-gnueabi/usr/share/pkgconfig
+
+arm-oe-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard --sysroot=/opt/motab-sdk/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+
+LDFLAGS=-Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed 
+
+GDB=arm-oe-linux-gnueabi-gdb
+
+MESA_DEBUG=1 EGL_LOG_LEVEL=debug LIBGL_DEBUG=verbose WAYLAND_DEBUG=1 weston-simple-egl
+
+
