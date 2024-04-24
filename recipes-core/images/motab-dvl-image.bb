@@ -1,12 +1,16 @@
 SUMMARY = "MOTAB Development filesystem image"
+DESCRIPTION = "Development filesystem image for MOTAB"
+LICENSE = "MIT"
+export IMAGE_BASENAME = "motab-dvl-image"
 
-DESCRIPTION = "Complete filesystem image for MOTAB"
+inherit core-image
 
-require recipes-core/images/arago-image.inc
 
-IMAGE_FEATURES:remove = " package-management splash "
+##require recipes-core/images/arago-image.inc
 
-IMAGE_FEATURES += " ssh-server-openssh "
+##IMAGE_FEATURES:remove = " package-management splash "
+
+##IMAGE_FEATURES += " ssh-server-openssh "
 ##IMAGE_FEATURES:append = " tools-debug "
 
 IMAGE_INSTALL += " \
@@ -30,5 +34,5 @@ BAD_RECOMMENDATIONS:pn-${PN} += " \
 
 
 
-export IMAGE_BASENAME = "motab-dvl-image"
+
 
