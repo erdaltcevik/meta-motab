@@ -7,18 +7,21 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 inherit packagegroup
 
 RDEPENDS:${PN} = " \
-  mesa-pvr \
+  weston-init \
+  wayland-utils \
+  gtk4 \
+  gdbserver \
 "
 #
-#  libegl \
-#  weston-init \
+#
+#   libegl \
 #  weston-examples \
-#  wayland-utils \
+#
 #  libdrm-tests \
-#  gtk4 \
+#  
 #  tslib \
 #  evtest \
-#  gdbserver \
+#  
 #  fb-test \
 #  gtk+3 \
 #  gtk+3-demo \
