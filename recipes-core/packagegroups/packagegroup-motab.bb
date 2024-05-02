@@ -9,11 +9,11 @@ inherit packagegroup
 RDEPENDS:${PN} = " \
   weston-init \
   wayland-utils \
-  gtk4 \
+  openssh \
   gdbserver \
 "
 #
-#
+#  gtk4 \
 #   libegl \
 #  weston-examples \
 #
@@ -31,7 +31,7 @@ RDEPENDS:${PN} = " \
 #  ti-sgx-ddk-um \
 #  dbus \
 #  networkmanager \
-#  openssh \
+#  
 #  openssh-sftp-server \
 #  tzdata \
 #  ntp \

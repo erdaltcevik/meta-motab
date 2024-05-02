@@ -1,11 +1,11 @@
 DISTRO_VERSION = "2024.04"
 
-##INIT_MANAGER = "systemd"
+INIT_MANAGER = "systemd"
 ##INIT_MANAGER = "sysvinit"
-INIT_MANAGER = "mdev-busybox"
+##INIT_MANAGER = "mdev-busybox"
 
 ##PREFERRED_PROVIDER_udev = ""
-PACKAGECONFIG:remove:pn-ti-sgx-ddk-um = "udev"
+##PACKAGECONFIG:remove:pn-ti-sgx-ddk-um = "udev"
 
 OPKG_ARGS:remove = "--prefer-arch-to-version"
 
@@ -35,8 +35,8 @@ DISTRO_FEATURES_DEFAULT:remove = " \
 DISTRO_FEATURES_BACKFILL_CONSIDERED = " \
  pulseaudio \
 "
-##DISTRO_FEATURES:append = " pam wayland opengl "
-DISTRO_FEATURES:append = " wayland opengl "
+DISTRO_FEATURES:append = " pam wayland opengl "
+##DISTRO_FEATURES:append = " wayland opengl "
 
 DEFAULT_TIMEZONE = "Europe/Istanbul"
 
@@ -46,11 +46,38 @@ PACKAGECONFIG:remove:pn-gdb = "python"
 PACKAGECONFIG:remove:pn-opkg-utils = "python"
 
 PACKAGECONFIG:remove:pn-systemd = " \
+  gshadow \
+  hostnamed \
+  idn \
+  ima \
+  kmod \
+  localed \
+  machined \
+  myhostname \
+  networkd \
+  nss \
+  nss-mymachines \
+  nss-resolve \
+  quotacheck \
+  randomseed \
+  resolved \
+  set-time-epoch \
+  sysusers \
+  sysvinit \
+  timedated \
+  timesyncd \
+  userdb \
+  utmp \
+  vconsole \
+  wheel-group \
   backlight \
   binfmt \
   zstd \
   hibernate \
   "
+#
+#  logind \
+#
 
 SYSTEMD_DEFAULT_TARGET = "graphical.target"
 
