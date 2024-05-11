@@ -11,9 +11,12 @@ RDEPENDS:${PN} = " \
   wayland-utils \
   openssh \
   gdbserver \
+  gtk4 \  
+  dbus \
+  networkmanager \
 "
 #
-#  gtk4 \
+#
 #   libegl \
 #  weston-examples \
 #
@@ -29,8 +32,8 @@ RDEPENDS:${PN} = " \
 #  kmscube \
 #  gobject-introspection \
 #  ti-sgx-ddk-um \
-#  dbus \
-#  networkmanager \
+# 
+#
 #  
 #  openssh-sftp-server \
 #  tzdata \

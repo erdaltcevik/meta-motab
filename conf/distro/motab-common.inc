@@ -1,12 +1,5 @@
 DISTRO_VERSION = "2024.04"
 
-INIT_MANAGER = "systemd"
-##INIT_MANAGER = "sysvinit"
-##INIT_MANAGER = "mdev-busybox"
-
-##PREFERRED_PROVIDER_udev = ""
-##PACKAGECONFIG:remove:pn-ti-sgx-ddk-um = "udev"
-
 OPKG_ARGS:remove = "--prefer-arch-to-version"
 
 DISTRO_FEATURES_DEFAULT:remove = " \
@@ -35,8 +28,17 @@ DISTRO_FEATURES_DEFAULT:remove = " \
 DISTRO_FEATURES_BACKFILL_CONSIDERED = " \
  pulseaudio \
 "
-DISTRO_FEATURES:append = " pam wayland opengl "
-##DISTRO_FEATURES:append = " wayland opengl "
+##DISTRO_FEATURES:append = " pam wayland opengl "
+DISTRO_FEATURES:append = " wayland opengl "
+
+##INIT_MANAGER = "systemd"
+INIT_MANAGER = "sysvinit"
+##INIT_MANAGER = "mdev-busybox"
+
+##PREFERRED_PROVIDER_udev = ""
+PACKAGECONFIG:remove:pn-ti-sgx-ddk-um = "udev"
+
+
 
 DEFAULT_TIMEZONE = "Europe/Istanbul"
 
@@ -47,10 +49,8 @@ PACKAGECONFIG:remove:pn-opkg-utils = "python"
 
 PACKAGECONFIG:remove:pn-systemd = " \
   gshadow \
-  hostnamed \
   idn \
   ima \
-  kmod \
   localed \
   machined \
   myhostname \
@@ -76,6 +76,8 @@ PACKAGECONFIG:remove:pn-systemd = " \
   hibernate \
   "
 #
+#  kmod \
+#   hostnamed \
 #  logind \
 #
 
@@ -88,29 +90,42 @@ SYSTEMD_DEFAULT_TARGET = "graphical.target"
 ##IMAGE_LINGUAS:remove = " en-us "
 
 PACKAGECONFIG:remove:pn-libdrm = " \
- intel \
- radeon \
- amdgpu \
- nouveau \
- vmwgfx \
- freedreno \
- vc4 \
- etnaviv \
+  intel \
+  radeon \
+  amdgpu \
+  nouveau \
+  vmwgfx \
+  freedreno \
+  vc4 \
+  etnaviv \
 "
 ##hostname:pn-base-files = "the-hostname"
 
-SIMPLECLIENTS = "egl"
+##SIMPLECLIENTS = "egl"
 
 PACKAGECONFIG:remove:pn-weston = " \
- shell-ivi \
- shell-kiosk \
- image-jpeg \
+  shell-ivi \
+  shell-kiosk \
+  image-jpeg \
 "
 ##
 ## wayland \
 ## shell-desktop \
 ##
 ##
+
+PACKAGECONFIG:remove:pn-gtk4 = " \
+  gstreamer \
+"
+
+PACKAGECONFIG:remove:pn-networkmanager = " \
+  vala \
+  dnsmasq \
+"
+#
+# 
+#
+
 
 INHERIT_DISTRO:remove = "create-spdx"
 

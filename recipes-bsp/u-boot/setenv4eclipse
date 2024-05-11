@@ -31,4 +31,135 @@ make -j1 motab-dvl_config
 
 make -j1 2>&1 | tee /stor/ubo_motab-dvl/build.log
 
+make ARCH=arm CROSS_COMPILE=arm-oe-linux-gnueabi-  motab-dvl_config
+**-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ARCH=arm
+CROSS_COMPILE=arm-oe-linux-gnueabi-
+
+CPP=arm-oe-linux-gnueabi-gcc -E  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 --sysroot=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+
+CC=arm-oe-linux-gnueabi-gcc  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 --sysroot=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+
+
+
+
+PKG_CONFIG_PATH=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi/usr/lib/pkgconfig:/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi/usr/share/pkgconfig
+OECORE_SDK_VERSION=nodistro.0
+M4=m4
+OECORE_TUNE_CCARGS= -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard
+GDB=arm-oe-linux-gnueabi-gdb
+SDKTARGETSYSROOT=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+OECORE_BASELIB=lib
+TARGET_PREFIX=arm-oe-linux-gnueabi-
+OE_CMAKE_FIND_LIBRARY_CUSTOM_LIB_SUFFIX=
+CXX=arm-oe-linux-gnueabi-g++  -march=armv7-a -mthumb -mfpu=neon -mfloat-abi=hard -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64 --sysroot=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+CXXFLAGS= -O2 -pipe -g -feliminate-unused-debug-types 
+OECORE_NATIVE_SYSROOT=/opt/sdk-scar/sysroots/x86_64-oesdk-linux
+LDFLAGS=-Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed 
+OECORE_TARGET_OS=linux-gnueabi
+OPENSSL_CONF=/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/lib/ssl-3/openssl.cnf
+SSL_CERT_DIR=/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/lib/ssl-3/certs
+KCFLAGS=--sysroot=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+OECORE_TARGET_SYSROOT=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+CPPFLAGS=
+OPENSSL_MODULES=/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/lib/ossl-modules/
+LD=arm-oe-linux-gnueabi-ld  --sysroot=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+READELF=arm-oe-linux-gnueabi-readelf
+AR=arm-oe-linux-gnueabi-ar
+AS=arm-oe-linux-gnueabi-as 
+NM=arm-oe-linux-gnueabi-nm
+OECORE_TARGET_ARCH=arm
+SSL_CERT_FILE=/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/lib/ssl-3/certs/ca-certificates.crt
+OECORE_DISTRO_VERSION=2024.04
+PKG_CONFIG_SYSROOT_DIR=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+OECORE_ACLOCAL_OPTS=-I /opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/share/aclocal
+OBJCOPY=arm-oe-linux-gnueabi-objcopy
+STRIP=arm-oe-linux-gnueabi-strip
+OBJDUMP=arm-oe-linux-gnueabi-objdump
+CONFIG_SITE=/opt/sdk-scar/site-config-armv7at2hf-neon-oe-linux-gnueabi
+CFLAGS= -O2 -pipe -g -feliminate-unused-debug-types 
+CONFIGURE_FLAGS=--target=arm-oe-linux-gnueabi --host=arm-oe-linux-gnueabi --build=x86_64-linux --with-libtool-sysroot=/opt/sdk-scar/sysroots/armv7at2hf-neon-oe-linux-gnueabi
+RANLIB=arm-oe-linux-gnueabi-ranlib
+CMAKE_TOOLCHAIN_FILE=/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/share/cmake/OEToolchainConfig.cmake
+OPENSSL_ENGINES=/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/lib/engines-3
+
+PATH=
+/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/bin:
+/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/sbin:
+/opt/sdk-scar/sysroots/x86_64-oesdk-linux/bin:
+/opt/sdk-scar/sysroots/x86_64-oesdk-linux/sbin:
+/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/bin/../x86_64-oesdk-linux/bin:
+/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/bin/arm-oe-linux-gnueabi:
+/opt/sdk-scar/sysroots/x86_64-oesdk-linux/usr/bin/arm-oe-linux-musl:
+/home/erdal/.local/bin:/home/erdal/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
+
+
+
+
+
+
+
+
+
+
+
+
+
+SHELL=/bin/bash
+COLORTERM=truecolor
+HISTCONTROL=ignoredups
+WLR_NO_HARDWARE_CURSORS=1
+HISTSIZE=1000
+HOSTNAME=fedo01
+I3SOCK=/run/user/1000/sway-ipc.1000.1214.sock
+XCURSOR_SIZE=24
+EDITOR=/usr/bin/vim
+XDG_SEAT=seat0
+PWD=/home/erdal
+LOGNAME=erdal
+XDG_SESSION_TYPE=wayland
+SYSTEMD_EXEC_PID=1022
+HOME=/home/erdal
+LANG=en_US.UTF-8
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:
+SWAYSOCK=/run/user/1000/sway-ipc.1000.1214.sock
+WAYLAND_DISPLAY=wayland-1
+INVOCATION_ID=439e24ea26af4a0687625ea0a8475bbc
+MOZ_GMP_PATH=/usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
+XDG_SESSION_CLASS=user
+TERM=foot-extra
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+USER=erdal
+DISPLAY=:0
+SHLVL=2
+XDG_VTNR=1
+XDG_SESSION_ID=1
+XDG_RUNTIME_DIR=/run/user/1000
+DEBUGINFOD_URLS=https://debuginfod.fedoraproject.org/ 
+GCC_COLORS=error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+MAIL=/var/spool/mail/erdal
+_=/usr/bin/env
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

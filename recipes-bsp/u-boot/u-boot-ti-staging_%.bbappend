@@ -1,34 +1,5 @@
-SUMMARY = "u-boot bootloader for motab"
 
-require ${COREBASE}/meta/recipes-bsp/u-boot/u-boot-common.inc
-require ${COREBASE}/meta/recipes-bsp/u-boot/u-boot.inc
-
-BRANCH ?= "master"
-UBOOT_GIT_URI ?= "git://git.ti.com/git/ti-u-boot/ti-u-boot.git"
-UBOOT_GIT_PROTOCOL = "https"
-SRC_URI = "${UBOOT_GIT_URI};protocol=${UBOOT_GIT_PROTOCOL};branch=${BRANCH}"
-
-# u-boot needs devtree compiler to parse dts files
-DEPENDS += "dtc-native bc-native lzop-native flex-native bison-native python3-setuptools-native"
-
-# u-boot needs these for binman
-DEPENDS += "python3-pyelftools-native python3-pyyaml-native python3-jsonschema-native"
-
-COMPATIBLE_MACHINE = "(ti-soc)"
-
-BINMAN_INDIRS="${STAGING_DIR_HOST}${nonarch_base_libdir}/firmware"
-
-EXTRA_OEMAKE += "${PACKAGECONFIG_CONFARGS} BINMAN_INDIRS=${BINMAN_INDIRS}"
-
-PROVIDES += "u-boot"
-PKG:${PN} = "u-boot"
-PKG:${PN}-dev = "u-boot-dev"
-PKG:${PN}-dbg = "u-boot-dbg"
-
-S = "${WORKDIR}/git"
-
-FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}-2023.04:"
-
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI:append = " \
   file://00-append-issi-to-nand_ids.c.patch \

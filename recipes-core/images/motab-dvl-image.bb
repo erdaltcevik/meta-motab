@@ -14,9 +14,12 @@ IMAGE_INSTALL += " \
 BAD_RECOMMENDATIONS:pn-${PN} += " \
   udev-hwdb \
   e2fsprogs-e2fsck \
+  adwaita-icon-theme-symbolic \
+  ifupdown \
+  init-ifupdown \
   "
 #
-#  adwaita-icon-theme-symbolic \
+#
 #
 
 
